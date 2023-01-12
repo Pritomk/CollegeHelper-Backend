@@ -10,6 +10,10 @@ const port = 5000;
 
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+    res.send('Successfully called college helper api')
+})
+
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/class', require('./routes/class'))
 app.use('/api/student', require('./routes/student'))
