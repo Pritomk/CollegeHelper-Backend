@@ -32,6 +32,7 @@ router.post(
     }
 
     try {
+      console.log(req.body);
       const { name, email, password } = req.body;
       console.log(name+email+password);
 
