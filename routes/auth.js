@@ -33,6 +33,7 @@ router.post(
 
     try {
       const { name, email, password } = req.body;
+      console.log(name+email+password);
 
       let savedUser = await User.findOne({ email: email });
       if (savedUser) {
@@ -76,6 +77,7 @@ router.post(
     }
 	try {
 		const { email, password } = req.body;
+    console.log(email+password);
 
 		const existingUser = await User.findOne({email: email});
 	
