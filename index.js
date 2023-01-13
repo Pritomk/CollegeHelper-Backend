@@ -15,6 +15,11 @@ app.get('/',(req,res)=>{
     res.send('Successfully called college helper api'+email)
 })
 
+app.post('/data',(req,res)=>{
+    console.log(req.body);
+    res.send('Response body is '+req.body);
+})
+
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/class', require('./routes/class'))
 app.use('/api/student', require('./routes/student'))
